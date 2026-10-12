@@ -1,0 +1,23 @@
+   # secrets - never upload
+   .env
+   **/.env
+
+   # Python environment and cache
+   venv/
+   .venv/
+   __pycache__/
+   *.pyc
+   .ipynb_checkpoints/
+
+   # large or regenerable data
+   **/data/raw/
+   **/data/processed/
+   **/data/feedback/
+   **/qdrant_local/
+   *.pkl
+   *.npy
+
+   # editor / OS
+   .vscode/
+   Thumbs.db
+   .DS_Store

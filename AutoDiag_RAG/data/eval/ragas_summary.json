@@ -1,0 +1,47 @@
+{
+  "judge_model": "openai/gpt-oss-120b",
+  "questions_scored": 48,
+  "errors": 0,
+  "answer_relevancy_methods": {
+    "embedding": 47,
+    "noncommittal": 1
+  },
+  "overall": {
+    "faithfulness": 0.928,
+    "answer_relevancy": 0.824,
+    "context_precision": 0.769,
+    "context_recall": 0.664
+  },
+  "by_type": {
+    "dtc_exact": {
+      "faithfulness": 0.899,
+      "answer_relevancy": 0.821,
+      "context_precision": 0.867,
+      "context_recall": 0.651
+    },
+    "dtc_paraphrase": {
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.802,
+      "context_precision": 0.908,
+      "context_recall": 0.958
+    },
+    "symptom": {
+      "faithfulness": 0.929,
+      "answer_relevancy": 0.79,
+      "context_precision": 0.681,
+      "context_recall": 0.521
+    },
+    "warranty": {
+      "faithfulness": 0.88,
+      "answer_relevancy": 0.894,
+      "context_precision": 0.571,
+      "context_recall": 0.5
+    }
+  },
+  "n_by_type": {
+    "dtc_exact": 14,
+    "dtc_paraphrase": 12,
+    "symptom": 12,
+    "warranty": 10
+  }
+}

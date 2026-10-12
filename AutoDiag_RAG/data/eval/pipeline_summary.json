@@ -1,0 +1,37 @@
+{
+  "queries_run": 51,
+  "errors": 1,
+  "router_accuracy": 1.0,
+  "router_correct": "48/48",
+  "in_scope_deferred_pct": 0.0,
+  "in_scope_deferred": "0/48",
+  "out_of_scope_deferred": "3/3",
+  "confidence_levels": {
+    "high": 45,
+    "medium": 3,
+    "low": 0,
+    "unknown": 0
+  },
+  "latency_ms": {
+    "end_to_end_median": 10911.0,
+    "end_to_end_p95": 21152.0,
+    "retrieval_median": 4338.0,
+    "generation_median": 6641.0
+  },
+  "answered_by_model": {
+    "not recorded (earlier run)": 30,
+    "groq:openai/gpt-oss-120b": 18
+  },
+  "warranty_verdicts": {
+    "WA01": "covered",
+    "WA02": "covered",
+    "WA03": "covered",
+    "WA04": "not_covered",
+    "WA05": "covered",
+    "WA06": "covered",
+    "WA07": "covered",
+    "WA08": "not_covered",
+    "WA09": "not_covered",
+    "WA10": "covered"
+  }
+}

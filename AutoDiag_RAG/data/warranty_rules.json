@@ -1,0 +1,35 @@
+{
+  "Honda": {
+    "basic": {"years": 3, "miles": 36000},
+    "powertrain": {"years": 5, "miles": 60000},
+    "seat_belts": {"years": 15, "miles": 150000},
+    "ac_refrigerant": {"years": 2, "miles": 24000},
+    "battery_12v": {"years": 8.33, "miles": null}
+  },
+  "Hyundai": {
+    "basic": {"years": 5, "miles": 60000},
+    "powertrain": {"years": 10, "miles": 100000},
+    "emissions_federal": {"years": 5, "miles": 60000}
+  },
+  "Toyota": {
+    "basic": {"years": 3, "miles": 36000},
+    "powertrain": {"years": 5, "miles": 60000},
+    "corrosion": {"years": 5, "miles": null},
+    "hybrid_system": {"years": 8, "miles": 100000},
+    "hybrid_battery": {"years": 10, "miles": 150000},
+    "emission_performance": {"years": 2, "miles": 24000},
+    "emission_defect_8_80": {"years": 8, "miles": 80000}
+  },
+    "Ford": {
+    "basic": {"years": 3, "miles": 36000},
+    "powertrain": {"years": 5, "miles": 60000}
+  },
+  "Nissan": {
+    "basic": {"years": 3, "miles": 36000},
+    "powertrain": {"years": 5, "miles": 60000}
+  },
+  "Kia": {
+    "basic": {"years": 5, "miles": 60000},
+    "powertrain": {"years": 10, "miles": 100000}
+}
+}

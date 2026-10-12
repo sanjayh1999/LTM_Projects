@@ -1,0 +1,27 @@
+# Core utilities
+python-dotenv
+pandas
+requests
+tqdm
+
+# Embeddings & retrieval
+sentence-transformers
+FlagEmbedding
+rank_bm25
+llama-index
+llama-index-vector-stores-qdrant
+llama-index-embeddings-huggingface
+llama-index-llms-gemini
+qdrant-client
+
+# LLM
+google-generativeai
+google-genai
+
+# Backend / API
+fastapi
+uvicorn
+
+streamlit
+ragas
+datasets
