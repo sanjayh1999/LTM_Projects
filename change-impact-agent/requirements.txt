@@ -1,0 +1,28 @@
+# Agent / LLM
+langgraph==0.2.60
+langchain-core==0.3.29
+python-dotenv==1.0.1
+
+# Backend & data
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+sqlalchemy==2.0.36
+psycopg2-binary==2.9.10
+pgvector==0.3.6
+pydantic==2.10.4
+
+# CLI
+typer==0.15.1
+rich==13.9.4
+
+# Environment discovery
+gitpython==3.1.43
+docker==7.1.0
+packaging==24.2
+networkx==3.4.2
+pydantic-settings==2.7.1
+sentence-transformers==3.3.1
+langchain-ollama==0.2.2
+
+# Testing
+pytest==8.3.4

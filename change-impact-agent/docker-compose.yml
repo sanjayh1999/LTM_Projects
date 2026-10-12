@@ -1,0 +1,16 @@
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: change-impact-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: citool
+      POSTGRES_PASSWORD: citool
+      POSTGRES_DB: change_impact
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

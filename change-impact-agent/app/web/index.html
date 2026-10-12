@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Change Impact Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" data-icon="logo"></div>
+        <div>
+          <div class="brand-name">Impact Agent</div>
+          <div class="brand-sub">Know before you change</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#analyze" class="nav-item" data-view="analyze"><span data-icon="bolt"></span>Analyze</a>
+        <a href="#inventory" class="nav-item" data-view="inventory"><span data-icon="grid"></span>Inventory</a>
+        <a href="#explorer" class="nav-item" data-view="explorer"><span data-icon="graph"></span>Explorer</a>
+        <a href="#history" class="nav-item" data-view="history"><span data-icon="clock"></span>History</a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <div class="foot-title">System</div>
+        <div class="status-row" id="status-db"><span class="dot"></span><span class="status-name">Database</span></div>
+        <div class="status-row" id="status-llm"><span class="dot"></span><span class="status-name">Local LLM</span></div>
+        <div class="readonly"><span data-icon="shield"></span>Read-only. Changes are verified only with your approval.</div>
+        <button id="theme-toggle" class="ghost-btn" type="button"><span data-icon="contrast"></span>Switch theme</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <!-- ANALYZE -->
+      <section id="view-analyze" class="view">
+        <header class="hero">
+          <div class="eyebrow"><span class="pulse-dot"></span>Agentic change-impact analysis</div>
+          <h1>What will this change <span class="grad">break?</span></h1>
+          <p class="lede">Ask in plain English. The agent inspects every virtual environment on this machine,
+            traces who depends on what, checks PyPI, scores the risk, and verifies with pip only when you approve.</p>
+          <form id="ask-form" class="ask" autocomplete="off">
+            <span class="ask-icon" data-icon="search"></span>
+            <input id="ask-input" type="text" placeholder="e.g. Can I downgrade numpy to 1.24.3?" aria-label="Describe the change">
+            <kbd class="ask-kbd">/</kbd>
+            <button id="ask-btn" class="primary-btn" type="submit">Analyze impact</button>
+          </form>
+          <div class="chips" id="examples"></div>
+        </header>
+        <div id="pipeline" class="pipeline hidden" aria-live="polite"></div>
+        <div id="result"></div>
+      </section>
+
+      <!-- INVENTORY -->
+      <section id="view-inventory" class="view hidden">
+        <header class="page-head">
+          <div class="eyebrow">Inventory</div>
+          <h2>Everything installed on this machine</h2>
+          <p class="lede">Projects, their virtual environments, and the packages they share. Shared packages have the widest blast radius.</p>
+        </header>
+        <div id="inventory-body"><div class="skeleton tall"></div></div>
+      </section>
+
+      <!-- EXPLORER -->
+      <section id="view-explorer" class="view hidden">
+        <header class="page-head">
+          <div class="eyebrow">Dependency explorer</div>
+          <h2>Why is this package installed?</h2>
+          <p class="lede">Type any package to see every project that has it, which installed packages pull it in, and whether it is declared directly.</p>
+          <form id="explore-form" class="ask compact" autocomplete="off">
+            <span class="ask-icon" data-icon="search"></span>
+            <input id="explore-input" type="text" placeholder="e.g. numpy, requests, torch" aria-label="Package name">
+            <button class="primary-btn" type="submit">Explore</button>
+          </form>
+        </header>
+        <div id="explore-result"></div>
+      </section>
+
+      <!-- HISTORY -->
+      <section id="view-history" class="view hidden">
+        <header class="page-head">
+          <div class="eyebrow">Episodic memory</div>
+          <h2>Every analysis, remembered</h2>
+          <p class="lede">Stored in PostgreSQL with embeddings, so the agent can recall similar past changes and their dry-run outcomes.</p>
+        </header>
+        <div id="history-body"><div class="skeleton tall"></div></div>
+      </section>
+    </main>
+  </div>
+  <div id="tooltip" class="tooltip hidden" role="tooltip"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
